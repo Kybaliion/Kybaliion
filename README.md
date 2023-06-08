@@ -1,0 +1,5 @@
+- 👋 olá eu sou o @Kybaliion
+- 👀 sou iniciante na programação e estou tentando aprender o maximo possivel
+- 🌱 atualmente estou aprendendo o basico de java, python e afins
+- 💞️ Espero Conseguir colaborar com varios projetos, alem de ser um bom programador
+- 📫 Quero chegar a um nivel bom de programação
