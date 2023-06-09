@@ -1,70 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>NineTails?</title>
 
     <style>
-        body{
-            background-color: black;
+    body {
+            background-image: url("Imagens/Background.gif");
+            background-color: #000000;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
         }
 
-        .painel{
+        .painel {
             margin: auto;
-            background-color: black;
+            background-color: #1d1d1d;
             width: 500px;
             height: 500px;
             border-radius: 20px;
             text-align: center;
             padding-top: 50px;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        #sim{
-            height: 40px;
-            width: 60px;
-            background-color: purple;
-            border: 2px solid white;
-            border-radius: 10px;
-            color: white;
-            margin-left: -50px;
-        }
-        #nao{
-            position: absolute;
-            height: 40px;
-            width: 60px;
-            background-color: purple;
-            border: 2px solid white;
-            border-radius: 10px;
-            color: white;
-            margin-left: 10px;
+            font-family: 'NineTails', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
+        .title {
+            font-family: 'NineTails', sans-serif;
+            color: #800080;
+            margin-top: 10px;
+        }
+
+        #sim {
+            height: 40px;
+            width: 100px;
+            background-color: #800080;
+            border: none;
+			margin-right: 30px; /* Espaçamento entre os botões */
+            border-radius: 10px;
+            color: white;
+			font-family: 'NineTails', sans-serif;
+            font-size: 18px;
+            margin-top: 20px;
+			position: relative; /* Alterada a posição para relative */
+            cursor: pointer;
+			left: -50px; /* Valor da posição lateral do botão */
+        }
+
+        #nao {
+		    position: absolute;
+            height: 40px;
+            width: 100px;
+            background-color: #800080;
+            border: none;
+			font-family: 'NineTails', sans-serif;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+            margin-top: 20px;
+			left: 700px; 
+            cursor: pointer;
+        }
+
+        @font-face {
+            font-family: 'NineTails';
+            src: url('fonts/NineTails.woff') format('woff');
+        }
     </style>
-
 </head>
 <body>
-
-    <div class="painel">
-        <h1 style="color:white"> Me aceita na Nine Tails?</h1>
-
-        <img src="https://cdn.discordapp.com/attachments/1049904955487694849/1116178626065469491/New_Project_8C97E79.gif"    
- alt="">
-
-   <h2 
-   style="color:white">
-   Escolha sabiamente! 
-</h2>
-        
-
-        <button onclick="parabens()" id="sim"> Sim! </button>
-        <button onmouseover="fuja()" id="nao"> Não! </button>
-        
-    </div>
-
-    <script>
-        function fuja(){
+<div class="painel">
+     <h1 class="title" style="font-family: 'NineTails', sans-serif;">Me aceita na Nine Tails?</h1>
+    <img src="Imagens/NineLogo.gif" alt="">
+    <h2 style="color:white">Escolha sabiamente!</h2>
+     <button onclick="parabens()" id="sim">Sim!</button>
+    <button onmouseover="fuja()" id="nao">Não!</button>
+</div>
+<script>
+      function fuja(){
             var botaoNao = document.getElementById("nao")
 
             var larguraJanela = window.innerWidth;
@@ -78,23 +91,11 @@
 
             botaoNao.style.left = aleatorioX + "px";
             botaoNao.style.top = aleatorioY + "px";
-
-
         }		
-		
-		function parabens(){
-		alert (" Parabens, você fez uma sabia escolha! ")
-		
-		
-		
-		
-		
-		}
-    </script>
-	
 
-
-
-    
+    function parabens() {
+        alert('Obrigado pela escolha! <3');
+    }
+</script>
 </body>
 </html>
